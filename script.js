@@ -1,6 +1,24 @@
-document.getElementById("increase").addEventListener('click',function(){
-   handleFirstTicket(true);
-})
+// document.getElementById("increase").addEventListener('click',function(){
+//     let firstClassInput = document.getElementById("firstClass-Count");
+//     console.log(firstClassInput);
+//     let firstClassCount = Number((firstClassInput.value));
+//     const firstClassNewCount = firstClassCount + 1;
+//     firstClassInput.value = firstClassNewCount;
+//  })
+
+
+// document.getElementById("increase").addEventListener('click',function(){
+//    handleFirstTicket(true);
+// })
+// document.getElementById("decrease").addEventListener('click',function(){
+//     let firstClassInput = document.getElementById("firstClass-Count");
+//     console.log(firstClassInput);
+//     let firstClassCount = Number((firstClassInput.value));
+//     const firstClassNewCount = firstClassCount - 1;
+//     firstClassInput.value = firstClassNewCount;
+//  })
+
+
 // document.getElementById("decrease").addEventListener('click',function(){
 //    handleFirstTicket(false);
 // })
@@ -10,34 +28,89 @@ document.getElementById("increase").addEventListener('click',function(){
 //      const firstClassNewCount = firstClassCount + 1;
 //     firstClassInput.value = firstClassNewCount;
 // })
+// document.getElementById("eco-increase").addEventListener('click',function(){
+//     handleSecondTicket(true);
+//     })
+
 // document.getElementById("eco-decrease").addEventListener('click',function(){
 //     let economyClassInput = document.getElementById("economy-Count");
 //     let economyClassCount = Number((economyClassInput.value));
 //     let  economyClassNewCount = economyClassCount - 1;
 //     economyClassInput.value = economyClassNewCount;
-// })
-function handleFirstTicket(isIncrease){
-    document.getElementById("increase").addEventListener('click',function(){
-        console.log("clicked");
-        let firstClassInput = document.getElementById("firstClass-Count");
-        console.log(firstClassInput);
-        let firstClassCount = Number((firstClassInput.value));
-        console.log(firstClassCount);
-        //  const firstClassNewCount = firstClassCount + 1;
-        let firstClassNewCount = firstClassCount;
-        if(isIncrease == true){
-            firstClassNewCount = firstClassCount + 1 ;
-            console.log(firstClassNewCount);
-        }
-        if (isIncrease == false && firstClassCount > 0){
-            firstClassNewCount = firstClassCount - 1 ;
-        }
-       
-        firstClassInput.value = firstClassNewCount;
-    })
-}
-  
+ // })
+// document.getElementById("eco-decrease").addEventListener('click',function(){
+//     handleSecondTicket(false);
+//     })
 
+// function handleFirstTicket(isConfirm){
+    
+//         let firstClassInput = document.getElementById("firstClass-Count");
+//         console.log(firstClassInput);
+//         let firstClassCount = Number((firstClassInput.value));
+        
+//         //  const firstClassNewCount = firstClassCount + 1;
+//         let firstClassNewCount = firstClassCount;
+//         if(isConfirm == true){
+//             firstClassNewCount = firstClassCount + 1 ;
+            
+//         };
+//         if (isConfirm == false & firstClassCount > 0){
+//             firstClassNewCount = firstClassCount - 1 ;
+//         };
+//         firstClassInput.value = firstClassNewCount;
+//     }
+//     function handleSecondTicket(isConfirm){
+//         let secondInput = document.getElementById("economy-Count");
+//         let secondCount = Number((secondInput.value));
+//         //const firstClassNewCount = firstClassCount + 1;
+//         let secondNewCount = secondCount;
+//         if (isConfirm == true ){
+//             secondNewCount = secondCount + 1 ;
+//         };
+//         if (isConfirm == false & secondCount > 0 ){
+//             secondNewCount = secondCount -1 ;
+//         }
+        
+//         secondInput.value = secondNewCount;
+//     }
+
+function handleTicket(ticket , isConfirm){
+    
+    let ticketInput = document.getElementById( ticket + "-Count");
+    
+    let ticketCount = Number((ticketInput.value));
+    
+    //  const firstClassNewCount = firstClassCount + 1;
+    let ticketNewCount = ticketCount;
+    if(isConfirm == true){
+        ticketNewCount = ticketCount + 1 ;
+        
+    };
+    if (isConfirm == false & ticketCount > 0){
+        ticketNewCount = ticketCount - 1 ;
+    };
+    ticketInput.value = ticketNewCount;
+    calculateTotal ();
+    // let ticketAmount = 0 ;
+    // // if(ticket == "firstClass"){
+    // //     ticketAmount = ticketNewCount * 150 ;
+    // // }
+    // // if(ticket = "economy"){
+    // //     ticketAmount = ticketNewCount * 100 ;
+    // // }
+    
+}
+function calculateTotal (){
+    let firstInput = document.getElementById("firstClass-Count");
+    console.log(firstInput);
+    let firstCount = Number(firstInput.value);
+
+    let secondInput = document.getElementById("economy-Count");
+    let secondCount = Number(secondInput.value);
+
+    const ticketTotal = firstCount * 150 +  secondCount *  100;
+    document.getElementById("subtotal").innerContent = '$' + ticketTotal;
+}
   
 
   

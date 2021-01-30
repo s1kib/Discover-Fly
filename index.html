@@ -57,9 +57,9 @@
                 </div>
                 <div class="plus-minus-btn col-sm-12">
 
-                    <button id="increase"  class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    
-                    <button id="decrease" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    <button onclick="handleTicket('firstClass',true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                    <button onclick="handleTicket('firstClass',false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
 
                 </div>
             </div>
@@ -72,8 +72,8 @@
                     
                 </div>
                 <div class="plus-minus-btn col-sm-12">
-                    <button id="eco-increase"  class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button id="eco-decrease"  class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    <button onclick="handleTicket('economy',true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                    <button onclick="handleTicket('economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -82,7 +82,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <h4 id="ticket-total">$500</h4>
+                        <h4 id="subtotal">$500</h4>
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <h5 id="tax-total">$50</h5>
+                        <h5>$50</h5>
                     </div>
                 </div>
                 <hr>
@@ -100,7 +100,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <h5 id="final-total">$550</h5>
+                        <h5>$550</h5>
                     </div>
                 </div>
             </div>
