@@ -91,14 +91,7 @@ function handleTicket(ticket , isConfirm){
     };
     ticketInput.value = ticketNewCount;
     calculateTotal ();
-    // let ticketAmount = 0 ;
-    // // if(ticket == "firstClass"){
-    // //     ticketAmount = ticketNewCount * 150 ;
-    // // }
-    // // if(ticket = "economy"){
-    // //     ticketAmount = ticketNewCount * 100 ;
-    // // }
-    
+ 
 }
 function calculateTotal (){
     let firstInput = document.getElementById("firstClass-Count");
@@ -109,7 +102,13 @@ function calculateTotal (){
     let secondCount = Number(secondInput.value);
 
     const ticketTotal = firstCount * 150 +  secondCount *  100;
-    document.getElementById("subtotal").innerContent = '$' + ticketTotal;
+    document.getElementById("subtotal").innerText = '$' + ticketTotal;
+
+    const vat = ticketTotal * 0.1;
+    document.getElementById("vat-total").innerText = '$' + vat;
+
+    const finalTotal = ticketTotal + vat ;
+    document.getElementById("finalTotal").innerText = '$' + finalTotal;
 }
   
 
