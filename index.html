@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking</title>
+    <title>Flight Booking-Assignment 3</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="magic-area">
+<body >
     <!--Header and Menu Section-->
     <section >
     <header class="container">
@@ -30,7 +30,7 @@
     </header>
 
     <!--Booking Section-->
-    <main  class="main-content container">
+    <main id="magic-area" class="main-content container">
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
@@ -58,9 +58,9 @@
                 </div>
                 <div class="plus-minus-btn col-sm-12">
 
-                    <button onclick="handleTicket('firstClass',true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                    <button onclick="handleTicket('firstClass',true)" class="btn btn-success"><i class="fas fa-plus"></i></button>
 
-                    <button onclick="handleTicket('firstClass',false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    <button onclick="handleTicket('firstClass',false)" class="btn btn-success"><i class="fas fa-minus"></i></button>
 
                 </div>
             </div>
@@ -73,8 +73,8 @@
                     
                 </div>
                 <div class="plus-minus-btn col-sm-12">
-                    <button onclick="handleTicket('economy',true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="handleTicket('economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    <button onclick="handleTicket('economy',true)" class="btn btn-success"><i class="fas fa-plus"></i></button>
+                    <button onclick="handleTicket('economy', false)" class="btn btn-success"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -112,10 +112,15 @@
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
-        <div id="confirm-area">
-            <h1>Congrats! Your ticket is confirm.</h1>
-        </div>
+        
+    </main>
+    
     </section>
+    <div id="confirm-area">
+        
+        <h1>Congrats! Your ticket is confirm.</h1>
+      </div> 
+ 
     <script src="script.js"></script>
 
     <!--Thank You-->

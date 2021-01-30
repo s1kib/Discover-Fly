@@ -74,13 +74,13 @@
 //         secondInput.value = secondNewCount;
 //     }
 
+
+/* 
+*****Handle Ticket
+*/
 function handleTicket(ticket , isConfirm){
-    
     let ticketInput = document.getElementById( ticket + "-Count");
-    
     let ticketCount = Number((ticketInput.value));
-    
-    //  const firstClassNewCount = firstClassCount + 1;
     let ticketNewCount = ticketCount;
     if(isConfirm == true){
         ticketNewCount = ticketCount + 1 ;
@@ -93,6 +93,9 @@ function handleTicket(ticket , isConfirm){
     calculateTotal ();
  
 }
+/*
+*** Calculate Total Amount
+*/
 function calculateTotal (){
     let firstInput = document.getElementById("firstClass-Count");
     console.log(firstInput);
@@ -112,7 +115,9 @@ function calculateTotal (){
     
 }
 
-
+/*
+**** Confirmation Message
+*/
   
   document.getElementById("btn-book").addEventListener('click', function(){
      const areaBooking = document.getElementById("magic-area")
