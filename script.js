@@ -109,7 +109,16 @@ function calculateTotal (){
 
     const finalTotal = ticketTotal + vat ;
     document.getElementById("finalTotal").innerText = '$' + finalTotal;
+    
 }
-  
 
+
+  
+  document.getElementById("btn-book").addEventListener('click', function(){
+     const areaBooking = document.getElementById("magic-area")
+     areaBooking.style.display = "none";
+     const confirmArea = document.getElementById("confirm-area");
+     confirmArea.style.display = "block";
+  })
+  
   

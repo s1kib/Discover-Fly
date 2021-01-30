@@ -23,6 +23,7 @@ nav{
     width: 1200px;
     max-width: 85%;
     margin: 0 auto;
+   
 }
 nav ul{
     display: flex;
@@ -104,10 +105,11 @@ nav ul li a:hover, a.active{
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     margin-bottom: 25px;
+    
 }
 
 .btn-style{
-    display: block;
+   display: flex;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -119,4 +121,8 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+#confirm-area{
+   display: none;
+   color:black;
 }
